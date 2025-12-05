@@ -1,0 +1,31 @@
+name: adapter-publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      npm_token_present:
+        description: "Confirm NPM token exists in secrets"
+        required: true
+        default: "false"
+  push:
+    tags:
+      - "adapter-v*"
+
+jobs:
+  publish:
+    if: github.event_name == 'push' || github.event.inputs.npm_token_present == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: packages/easyconnect-adapter
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: https://registry.npmjs.org
+      - run: bun install
+      - run: bun run build
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
