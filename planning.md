@@ -7,6 +7,12 @@ Deliverables:
 - System architecture diagram that shows EasyConnect Webhook Receiver, Quest Evaluation Engine, Reward System, Leaderboard, Notifications, and Admin Panel interactions.
 - Qubic C++ contract specifications detailing required on-chain state, callable methods, and event structure, aligned with the library that will interact with the chain.
 - Technical backlog with acceptance criteria for each component.
+**Artifacts in progress (Milestone 1)**
+- `docs/milestone-1/product-brief.md` – quest catalog + badge/XP economy outline.
+- `docs/milestone-1/system-architecture.md` – component flow, data contracts, and textual sequence diagram.
+- `docs/milestone-1/qubic-contract-spec.md` – storage layout, actions, and events for Qubic contracts managed by @nouslabs.
+- `docs/milestone-1/technical-backlog.md` – INVEST stories with owners (default @nouslabs) and acceptance criteria.
+- `docs/milestone-1/implementation-status.md` – running log of shipped UI/infra work for milestone 1 plus next steps before milestone 2.
 ### Issue: Blueprint Validation & Architecture Alignment
 **Description**
 Capture the end-to-end journey of an EasyConnect event through Ascent, align stakeholders on the quest catalog, and lock the qubic contract requirements before we touch code so downstream teams can build confidently.
@@ -23,6 +29,12 @@ Deliverables:
 - On-chain schemas for tracking quest progress, badge issuance, and XP allocations.
 - EasyConnect webhook adapter that normalizes Qubic transactions into Ascent events via the in-house library.
 - CI job that builds the C++ contracts and runs deterministic contract tests on every pull request.
+**Artifacts (Milestone 2)**
+- `docs/milestone-2/integration-plan.md` – objectives, workstreams, and deliverables for Qubic integration and adapters.
+- `docs/milestone-2/contract-roadmap.md` – week-by-week breakdown of contract modules, adapter tasks, testing, and deployment runbook.
+- `docs/milestone-2/technical-backlog.md` – actionable issue list (M2-01 … M2-08) with owners and acceptance criteria.
+- `docs/milestone-2/implementation-status.md` – running status for contracts, adapter, CI, replay harness, and pending external steps.
+- `docs/milestone-2/localnet-readme.md` – guide for capturing localnet payloads and regenerating replay fixtures once access is granted.
 ### Issue: Qubic Contract Bring-Up & EasyConnect Adapter
 **Description**
 Implement the first contract slice plus the webhook adapter so we can observe qubic transactions flowing into Ascent test environments with deterministic builds.

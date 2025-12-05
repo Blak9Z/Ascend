@@ -17,7 +17,6 @@
   },
   "devDependencies": {
     "prisma": "^7.0.1",
-    "@types/pg": "^8.11.11",
     "@ascend/config": "workspace:*"
   },
   "peerDependencies": {
@@ -26,7 +25,6 @@
   "dependencies": {
     "@prisma/client": "catalog:",
     "@prisma/adapter-pg": "^7.0.1",
-    "pg": "^8.14.1",
     "dotenv": "catalog:",
     "zod": "^4.1.11"
   }

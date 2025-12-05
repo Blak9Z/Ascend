@@ -1,0 +1,72 @@
+[
+  {
+    "rawEvent": {
+      "type": "QuestProgressed",
+      "questId": "connect-profile",
+      "wallet": "0xabc",
+      "status": 1,
+      "actionHash": "0x1",
+      "timestamp": 1733443200
+    },
+    "chainAction": {
+      "id": "a47bd2a655bd6688ec5fd45283a98787b1729ba9aeef5ba0aaf734d2b2982731",
+      "wallet": "0xabc",
+      "questId": "connect-profile",
+      "actionType": "qubic.QuestProgressed",
+      "timestamp": 1733443200,
+      "payload": {
+        "questId": "connect-profile",
+        "wallet": "0xabc",
+        "status": 1,
+        "actionHash": "0x1",
+        "timestamp": 1733443200
+      }
+    }
+  },
+  {
+    "rawEvent": {
+      "type": "XPAwarded",
+      "questId": "connect-profile",
+      "wallet": "0xabc",
+      "amount": 50,
+      "multiplier": 1,
+      "timestamp": 1733443205
+    },
+    "chainAction": {
+      "id": "b05e4e73403416c4dea477b228daaf3c2ed9209910ec003ffca9d5d1a7d160fb",
+      "wallet": "0xabc",
+      "questId": "connect-profile",
+      "actionType": "qubic.XPAwarded",
+      "timestamp": 1733443205,
+      "payload": {
+        "questId": "connect-profile",
+        "wallet": "0xabc",
+        "amount": 50,
+        "multiplier": 1,
+        "timestamp": 1733443205
+      }
+    }
+  },
+  {
+    "rawEvent": {
+      "type": "BadgeMinted",
+      "questId": "connect-profile",
+      "wallet": "0xabc",
+      "badgeId": "starter-spark",
+      "timestamp": 1733443210
+    },
+    "chainAction": {
+      "id": "7ab06594bba41510da12335d4e99ec97d02089a912dd61d583a1bf43c5549f2e",
+      "wallet": "0xabc",
+      "questId": "connect-profile",
+      "actionType": "qubic.BadgeMinted",
+      "timestamp": 1733443210,
+      "payload": {
+        "questId": "connect-profile",
+        "wallet": "0xabc",
+        "badgeId": "starter-spark",
+        "timestamp": 1733443210
+      }
+    }
+  }
+]
