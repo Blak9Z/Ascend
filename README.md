@@ -29,7 +29,6 @@ This project uses PostgreSQL with Prisma.
 
 1. Make sure you have a PostgreSQL database set up.
 2. Update your `apps/web/.env` file with your PostgreSQL connection details.
-
 3. Generate the Prisma client and push the schema:
 ```bash
 bun run db:push
