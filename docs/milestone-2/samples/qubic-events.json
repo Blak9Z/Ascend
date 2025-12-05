@@ -1,0 +1,25 @@
+[
+  {
+    "type": "QuestProgressed",
+    "questId": "connect-profile",
+    "wallet": "0xabc",
+    "status": 1,
+    "actionHash": "0x1",
+    "timestamp": 1733443200
+  },
+  {
+    "type": "XPAwarded",
+    "questId": "connect-profile",
+    "wallet": "0xabc",
+    "amount": 50,
+    "multiplier": 1,
+    "timestamp": 1733443205
+  },
+  {
+    "type": "BadgeMinted",
+    "questId": "connect-profile",
+    "wallet": "0xabc",
+    "badgeId": "starter-spark",
+    "timestamp": 1733443210
+  }
+]

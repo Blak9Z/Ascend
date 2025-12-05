@@ -1,0 +1,23 @@
+{
+  "name": "@nouslabs/easyconnect-adapter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format cjs,esm",
+    "lint": "biome check src",
+    "test": "bun test",
+    "replay": "bun scripts/replay.ts --input ../../docs/milestone-2/samples/qubic-events.json --output ../../docs/milestone-2/samples/chain-actions.json"
+  },
+  "dependencies": {
+    "@nouslabs/sdk": "^3.1.2",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
+  }
+}

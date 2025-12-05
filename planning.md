@@ -33,6 +33,7 @@ Deliverables:
 - `docs/milestone-2/integration-plan.md` – objectives, workstreams, and deliverables for Qubic integration and adapters.
 - `docs/milestone-2/contract-roadmap.md` – week-by-week breakdown of contract modules, adapter tasks, testing, and deployment runbook.
 - `docs/milestone-2/technical-backlog.md` – actionable issue list (M2-01 … M2-08) with owners and acceptance criteria.
+- `docs/milestone-2/implementation-status.md` – running status for contracts, adapter, CI, and replay harness.
 ### Issue: Qubic Contract Bring-Up & EasyConnect Adapter
 **Description**
 Implement the first contract slice plus the webhook adapter so we can observe qubic transactions flowing into Ascent test environments with deterministic builds.
