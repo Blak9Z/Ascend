@@ -15,8 +15,8 @@ Every reward ledger insertion should fan out to Discord, Notion, Sheets, and Zap
   "streakDays": 9,
   "issuedAt": "2025-12-06T02:21:00Z",
   "links": {
-    "dashboard": "https://ascent.quest/users/0xabc",
-    "quest": "https://ascent.quest/quests/mastery-sweep"
+    "dashboard": "https://ascend.quest/users/0xabc",
+    "quest": "https://ascend.quest/quests/mastery-sweep"
   }
 }
 ```

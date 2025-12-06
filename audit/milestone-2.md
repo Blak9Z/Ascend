@@ -1,7 +1,7 @@
 # Milestone 2 Audit – Qubic Integration & Adapter
 
 ## Snapshot
-- **Goal:** Stand up blockchain layer and adapter so Qubic transactions flow into Ascent services.
+- **Goal:** Stand up blockchain layer and adapter so Qubic transactions flow into Ascend services.
 - **Status:** ✅ Core artifacts shipped; release workflows blocked by GitHub billing.
 
 ## Delivered Evidence
@@ -19,4 +19,3 @@
 1. Resolve GitHub billing lock so CI can compile contracts/tests per PR.
 2. Capture actual Qubic payloads and refresh sample fixtures.
 3. Add observability hooks (logs/metrics) once adapter deployed to staging.
-

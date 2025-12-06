@@ -26,7 +26,7 @@ export const milestoneSummaries: MilestoneSummary[] = [
       "Locked the quest catalog, XP economy, and the initial qubic contract requirements so downstream workstreams could execute in parallel.",
     highlights: [
       "Interviewed stakeholders to rank the flagship onboarding, learning, and competition quests.",
-      "Captured full system architecture diagrams that map EasyConnect signals through Ascent services.",
+      "Captured full system architecture diagrams that map EasyConnect signals through Ascend services.",
       "Documented qubic contract storage, entrypoints, and event payloads aligned with the in-house integration library.",
     ],
     deliverables: [
@@ -47,7 +47,7 @@ export const milestoneSummaries: MilestoneSummary[] = [
     owner: "@nouslabs",
     progress: 100,
     description:
-      "Delivered the first contract slice, EasyConnect adapter, and CI hooks so we can move normalized chain actions into Ascent environments.",
+      "Delivered the first contract slice, EasyConnect adapter, and CI hooks so we can move normalized chain actions into Ascend environments.",
     highlights: [
       "Stood up the qubic contract workspace with scripts, formatting, and deterministic tests.",
       "Shipped the EasyConnect adapter package plus replay harness for fixture-driven debugging.",

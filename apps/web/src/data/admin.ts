@@ -33,53 +33,6 @@ export type NotificationLog = {
   issuedAt: string;
 };
 
-export const adminQuestRecords: AdminQuestRecord[] = [
-  {
-    id: "connect-profile",
-    title: "Connect wallet & complete profile",
-    category: "Onboarding",
-    status: "completed",
-    xp: 50,
-    badge: "Starter Spark",
-    owner: "@nouslabs",
-    published: true,
-    updatedAt: "2025-12-05T18:30:00Z",
-  },
-  {
-    id: "learning-sim",
-    title: "Run quest evaluation sim",
-    category: "Learning",
-    status: "in_progress",
-    xp: 80,
-    badge: "Rule Crafter",
-    owner: "@nouslabs",
-    published: true,
-    updatedAt: "2025-12-05T23:45:00Z",
-  },
-  {
-    id: "competition-dash",
-    title: "Prototype leaderboard dash",
-    category: "Competition",
-    status: "in_progress",
-    xp: 140,
-    badge: "Season Architect",
-    owner: "@design_ops",
-    published: false,
-    updatedAt: "2025-12-04T16:05:00Z",
-  },
-  {
-    id: "mastery-sweep",
-    title: "Complete cross-category mastery sweep",
-    category: "Mastery",
-    status: "locked",
-    xp: 250,
-    badge: "Legendary Ember",
-    owner: "@growth_ops",
-    published: false,
-    updatedAt: "2025-12-03T11:15:00Z",
-  },
-];
-
 export const pendingOverrides: OverrideRequest[] = [
   {
     id: "ovr-001",

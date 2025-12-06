@@ -35,5 +35,6 @@
 1. Build contracts via CI, upload artifacts.
 2. Run `deploy:localnet` and `deploy:staging` scripts with parameter overrides.
 3. Update adapter config with contract addresses + keys.
-4. Broadcast test quests, validate events in Ascent playground UI.
+4. Broadcast test quests, validate events in Ascend playground UI.
 5. Record snapshots and archive logs in Notion/Drive.
+

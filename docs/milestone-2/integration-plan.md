@@ -1,7 +1,7 @@
 # Milestone 2 – Qubic Integration & Contract Foundations
 
 ## Objectives
-- Deploy the initial Qubic contract suite plus EasyConnect adapters so chain events reach Ascent services with deterministic schemas.
+- Deploy the initial Qubic contract suite plus EasyConnect adapters so chain events reach Ascend services with deterministic schemas.
 - Validate bidirectional communication between the C++ contracts, the @nouslabs integration library, and the webhook receiver.
 - Establish CI/CD workflows (build, test, deploy) for smart contracts and adapters.
 
@@ -24,3 +24,4 @@
 - Adapter package published under internal registry (npm scope `@nouslabs`).
 - Sample EasyConnect payloads recorded from localnet for replay.
 - Runbooks for deployment, key rotation, and incident response.
+
