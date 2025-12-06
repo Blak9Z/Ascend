@@ -1,12 +1,12 @@
 import type { QuestProgressRecord } from "./types";
 
-export interface ProgressStore {
+export type ProgressStore = {
   upsert(record: QuestProgressRecord): QuestProgressRecord;
   get(questId: string, wallet: string): QuestProgressRecord | undefined;
-}
+};
 
 export class InMemoryProgressStore implements ProgressStore {
-  private store = new Map<string, QuestProgressRecord>();
+  private readonly store = new Map<string, QuestProgressRecord>();
 
   private key(questId: string, wallet: string) {
     return `${questId}:${wallet}`;

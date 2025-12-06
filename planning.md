@@ -81,6 +81,15 @@ Ensure reward issuance, badge minting, and leaderboard snapshots stay in sync ev
 - Design badge metadata (name, rarity, art CID) and wire the qubic contract hook that anchors badge ownership on-chain.
 - Build leaderboard aggregation jobs with season rollover commands that support tie-breaker rules such as XP, completion time, or streaks.
 - Author end-to-end tests that trigger quest completion via mocked EasyConnect events and assert XP, badge, and leaderboard states update within SLA.
+**Artifacts (Milestone 4)**
+- `docs/milestone-4/integration-plan.md` – reward, badge, leaderboard objectives/workstreams.
+- `docs/milestone-4/technical-backlog.md` – M4 issue list with owners + acceptance criteria.
+- `docs/milestone-4/reward-loop.md` – reward worker data contracts + API surface.
+- `docs/milestone-4/badge-registry.md` – canonical badge metadata schema + sample entries.
+- `docs/milestone-4/leaderboard-plan.md` – aggregation workflow, ranking rules, and APIs.
+- `docs/milestone-4/notifications.md` – outbound payload specs + replay CLI references.
+- `docs/milestone-4/implementation-status.md` – rolling updates/blockers for milestone 4.
+- `docs/milestone-4/samples/` – example reward event + leaderboard snapshot fixtures.
 
 ## Milestone 5 - Notifications, Admin Panel & Launch (Week 9-10)
 Focus: polish the operator and user experiences, wire up comms, and ship to early partners.
@@ -97,3 +106,10 @@ Finalize operator tooling, outbound notifications, and the launch process so par
 - Implement admin panel permissions, quest CRUD flows, and manual override tools for stuck quests or reward disputes.
 - Configure Grafana or Prometheus dashboards plus alert rules covering webhook ingestion, contract execution time, and quest evaluation lag.
 - Draft and execute the beta checklist: deploy contracts, seed the quest catalog, onboard first partners, and run a go or no-go review with stakeholders.
+**Artifacts (Milestone 5)**
+- `docs/milestone-5/integration-plan.md` – admin panel, notifications, launch readiness objectives.
+- `docs/milestone-5/technical-backlog.md` – issue list with owners + acceptance criteria.
+- `docs/milestone-5/admin-panel.md` – operator UX blueprint & RBAC requirements.
+- `docs/milestone-5/notifications-pipeline.md` – delivery flow, schema, replay CLI.
+- `docs/milestone-5/launch-checklist.md` – beta go-live runbook.
+- `docs/milestone-5/implementation-status.md` – progress log + blockers.

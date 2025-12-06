@@ -1,4 +1,5 @@
-export * from "./types";
+/* biome-ignore lint/performance/noBarrelFile: package entrypoint re-exports shared modules */
 export * from "./dsl";
-export * from "./persistence";
 export { QuestEvaluationEngine } from "./engine";
+export * from "./persistence";
+export * from "./types";

@@ -1,4 +1,5 @@
 import { questRuleCatalogSchema } from "./dsl";
+import { InMemoryProgressStore, type ProgressStore } from "./persistence";
 import type {
   ChainAction,
   EvaluationResult,
@@ -6,15 +7,14 @@ import type {
   QuestRule,
   QuestRuleInput,
 } from "./types";
-import { InMemoryProgressStore, type ProgressStore } from "./persistence";
 
-export interface QuestEvaluationEngineOptions {
+export type QuestEvaluationEngineOptions = {
   store?: ProgressStore;
-}
+};
 
 export class QuestEvaluationEngine {
   private rules: QuestRule[] = [];
-  private store: ProgressStore;
+  private readonly store: ProgressStore;
 
   constructor(options: QuestEvaluationEngineOptions = {}) {
     this.store = options.store ?? new InMemoryProgressStore();
@@ -31,7 +31,10 @@ export class QuestEvaluationEngine {
       .flatMap((rule) => this.evaluateRule(rule, action));
   }
 
-  private evaluateRule(rule: QuestRule, action: ChainAction): EvaluationResult[] {
+  private evaluateRule(
+    rule: QuestRule,
+    action: ChainAction
+  ): EvaluationResult[] {
     const conditionsMet = rule.conditions.every((condition) =>
       this.evaluateCondition(condition, action)
     );
@@ -73,7 +76,10 @@ export class QuestEvaluationEngine {
     ];
   }
 
-  private evaluateCondition(condition: QuestRule["conditions"][number], action: ChainAction) {
+  private evaluateCondition(
+    condition: QuestRule["conditions"][number],
+    action: ChainAction
+  ) {
     const value = this.extractField(action, condition.field);
     switch (condition.operator) {
       case "equals":
@@ -98,19 +104,29 @@ export class QuestEvaluationEngine {
       return action.actionType;
     }
     const parts = fieldPath.split(".");
-    let current: any = action;
+    let current: unknown = action;
     for (const part of parts) {
       if (part === "payload") {
         current = action.payload;
         continue;
       }
-      if (current == null) return undefined;
-      current = current[part];
+      if (typeof current !== "object" || current === null) {
+        return;
+      }
+      const record = current as Record<string, unknown>;
+      if (!(part in record)) {
+        return;
+      }
+      current = record[part];
     }
     return current;
   }
 
-  private checkCompletion(rule: QuestRule, action: ChainAction, record: QuestProgressRecord) {
+  private checkCompletion(
+    rule: QuestRule,
+    action: ChainAction,
+    record: QuestProgressRecord
+  ) {
     if (record.completed) {
       return false;
     }

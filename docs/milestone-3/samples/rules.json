@@ -4,7 +4,11 @@
     "questId": "connect-profile",
     "description": "Verify wallet and complete profile metadata",
     "conditions": [
-      { "field": "actionType", "operator": "equals", "value": "qubic.QuestProgressed" },
+      {
+        "field": "actionType",
+        "operator": "equals",
+        "value": "qubic.QuestProgressed"
+      },
       { "field": "payload.status", "operator": "gte", "value": 1 }
     ],
     "completion": { "type": "eventCount", "threshold": 1 },
@@ -15,7 +19,11 @@
     "questId": "learning-sim",
     "description": "Replay five payloads via @nouslabs SDK",
     "conditions": [
-      { "field": "actionType", "operator": "equals", "value": "qubic.XPAwarded" }
+      {
+        "field": "actionType",
+        "operator": "equals",
+        "value": "qubic.XPAwarded"
+      }
     ],
     "completion": { "type": "eventCount", "threshold": 5 },
     "rewards": { "xp": 80, "badgeId": "rule-crafter" }

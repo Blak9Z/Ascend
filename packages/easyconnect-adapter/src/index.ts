@@ -3,7 +3,11 @@ import crypto from "node:crypto";
 import type { AdapterResult, QubicEvent } from "./types";
 
 export class QubicEventAdapter {
-  constructor(private readonly namespace = "qubic") {}
+  private readonly namespace: string;
+
+  constructor(namespace = "qubic") {
+    this.namespace = namespace;
+  }
 
   normalize(event: QubicEvent): AdapterResult {
     const actionType = `${this.namespace}.${event.type}`;
@@ -29,9 +33,9 @@ export class QubicEventAdapter {
 
   private stripInternalFields(event: QubicEvent) {
     const clone = { ...event } as Record<string, unknown>;
-    delete clone.type;
+    clone.type = undefined;
     return clone;
   }
 }
 
-export type { QubicEvent, AdapterResult } from "./types";
+export type { AdapterResult, QubicEvent } from "./types";
