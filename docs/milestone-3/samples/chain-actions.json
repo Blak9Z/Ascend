@@ -1,0 +1,23 @@
+[
+  {
+    "id": "a47bd2a655bd6688ec5fd45283a98787b1729ba9aeef5ba0aaf734d2b2982731",
+    "wallet": "0xabc",
+    "questId": "connect-profile",
+    "actionType": "qubic.QuestProgressed",
+    "timestamp": 1733443200,
+    "payload": {
+      "status": 1,
+      "actionHash": "0x1"
+    }
+  },
+  {
+    "id": "b05e4e73403416c4dea477b228daaf3c2ed9209910ec003ffca9d5d1a7d160fb",
+    "wallet": "0xabc",
+    "questId": "learning-sim",
+    "actionType": "qubic.XPAwarded",
+    "timestamp": 1733443205,
+    "payload": {
+      "amount": 50
+    }
+  }
+]

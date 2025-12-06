@@ -59,6 +59,12 @@ Deliver the stateless quest engine plus a replay harness that proves recorded Ea
 - Implement the evaluation loop as a deterministic service that accepts normalized events, evaluates rules, and emits idempotent progress updates.
 - Stand up Postgres schemas for quest states (progress, completion, timestamps) with migrations checked into the repo.
 - Build a replay CLI that ingests captured payloads, replays them against staging, and exports coverage reports tying quests to sample data.
+**Artifacts (Milestone 3)**
+- `docs/milestone-3/integration-plan.md` – objectives + workstreams for the quest evaluation engine.
+- `docs/milestone-3/technical-backlog.md` – issue list (M3-01 …).
+- `docs/milestone-3/rule-dsl.md` + `samples/` – DSL spec and sample rule catalog/fixtures.
+- `docs/milestone-3/implementation-status.md` – running status updates.
+- `packages/quest-engine` – source package for the evaluation engine and DSL tooling.
 
 ## Milestone 4 - Rewards, Badges, and Leaderboard (Week 7-8)
 Focus: finalize the player-facing outcomes for completed quests and ensure everything syncs to the public leaderboard.
