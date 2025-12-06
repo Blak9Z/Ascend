@@ -1,7 +1,7 @@
-# Product Brief – Ascent Milestone 1
+# Product Brief – Ascend Milestone 1
 
 ## Purpose
-Define the flagship quest experiences Ascent will ship during milestone 1 so downstream teams can align on requirements for evaluation, rewards, and comms.
+Define the flagship quest experiences Ascend will ship during milestone 1 so downstream teams can align on requirements for evaluation, rewards, and comms.
 
 ## Personas
 1. **Explorers** – new wallet owners coming from EasyConnect partner activations; measure success via quest completion and retention.
@@ -34,3 +34,4 @@ Define the flagship quest experiences Ascent will ship during milestone 1 so dow
 - 1,000 wallet connections with verified quest progress before Milestone 2 begins.
 - At least 30% of quests triggered automatically via EasyConnect replays (no manual marking).
 - Feedback loop: collect qualitative input from 10 champions to refine quest catalog.
+

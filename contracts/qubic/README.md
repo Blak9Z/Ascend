@@ -1,6 +1,6 @@
 # Qubic Contracts
 
-Ascent's milestone-2 contract suite is implemented in C++ and targets the Qubic runtime. This repo provides tooling to build, test, and deploy the quest ledger, XP allocator, and badge minter contracts.
+Ascend's milestone-2 contract suite is implemented in C++ and targets the Qubic runtime. This repo provides tooling to build, test, and deploy the quest ledger, XP allocator, and badge minter contracts.
 
 ## Project structure
 
@@ -39,3 +39,4 @@ ctest --test-dir build
 - Flesh out ledger + badge mint logic according to `docs/milestone-1/qubic-contract-spec.md`.
 - Add deployment scripts that push compiled WASM to Qubic localnet nodes.
 - Wire CI to run `cmake --build` + `ctest` on every PR.
+

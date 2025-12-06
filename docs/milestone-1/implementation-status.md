@@ -1,7 +1,7 @@
 # Milestone 1 – Implementation Status
 
 ## Overview
-Milestone 1 focused on aligning Ascent’s product vision with a tangible UI/architecture foundation. All planned artifacts are now committed with working stubs in `apps/web` and updated infra defaults (SQLite) so downstream teams can build on deterministic data.
+Milestone 1 focused on aligning Ascend’s product vision with a tangible UI/architecture foundation. All planned artifacts are now committed with working stubs in `apps/web` and updated infra defaults (SQLite) so downstream teams can build on deterministic data.
 
 ## Deliverable checklist
 | Deliverable | Status | Notes |
@@ -22,3 +22,4 @@ Milestone 1 focused on aligning Ascent’s product vision with a tangible UI/archi
 1. Review UI scaffolds with product/design; track feedback as issues tagged `M1-07`.
 2. Begin wiring quest data to ORPC endpoints once backend APIs land.
 3. Finalize Milestone 1 go/no-go review notes and ensure all docs point to the committed components.
+

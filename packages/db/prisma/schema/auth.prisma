@@ -60,3 +60,110 @@ model Verification {
   @@index([identifier])
   @@map("verification")
 }
+
+enum QuestDifficulty {
+  STARTER
+  SKILLED
+  LEGENDARY
+}
+
+enum QuestLifecycleStatus {
+  DRAFT
+  ACTIVE
+  ARCHIVED
+}
+
+model Quest {
+  id               String                 @id @default(cuid())
+  slug             String                 @unique
+  title            String
+  summary          String
+  category         String
+  xp               Int
+  badge            String?
+  difficulty       QuestDifficulty        @default(STARTER)
+  estimatedMinutes Int                    @default(5)
+  owner            String
+  lifecycleStatus  QuestLifecycleStatus   @default(DRAFT)
+  statusLabel      String                 @default("locked")
+  published        Boolean                @default(false)
+  createdAt        DateTime               @default(now())
+  updatedAt        DateTime               @updatedAt
+  steps            QuestStep[]
+  rules            QuestRule[]
+  actions          QuestAction[]
+  ruleProgress     QuestRuleProgress[]
+  ledgerEntries    QuestLedgerEntry[]
+}
+
+model QuestStep {
+  id          String   @id @default(cuid())
+  questId     String
+  quest       Quest    @relation(fields: [questId], references: [id], onDelete: Cascade)
+  title       String
+  description String?
+  position    Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model QuestRule {
+  id            String            @id @default(cuid())
+  questId       String
+  quest         Quest             @relation(fields: [questId], references: [id], onDelete: Cascade)
+  name          String?
+  description   String?
+  conditions    Json
+  completion    Json
+  reward        Json?
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+  progress      QuestRuleProgress[]
+  ledgerEntries QuestLedgerEntry[]
+}
+
+model QuestRuleProgress {
+  id           String    @id @default(cuid())
+  questId      String
+  ruleId       String
+  wallet       String
+  count        Int       @default(0)
+  completed    Boolean   @default(false)
+  completedAt  DateTime?
+  lastActionId String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  quest        Quest     @relation(fields: [questId], references: [id], onDelete: Cascade)
+  rule         QuestRule @relation(fields: [ruleId], references: [id], onDelete: Cascade)
+
+  @@unique([questId, wallet, ruleId])
+  @@index([wallet])
+}
+
+model QuestAction {
+  id         String   @id
+  questId    String
+  wallet     String
+  actionType String
+  payload    Json
+  timestamp  DateTime
+  createdAt  DateTime @default(now())
+  quest      Quest    @relation(fields: [questId], references: [id], onDelete: Cascade)
+
+  @@index([questId, wallet])
+}
+
+model QuestLedgerEntry {
+  id        String    @id @default(cuid())
+  questId   String
+  ruleId    String
+  wallet    String
+  xpAwarded Int
+  badgeId   String?
+  actionId  String
+  createdAt DateTime  @default(now())
+  quest     Quest     @relation(fields: [questId], references: [id], onDelete: Cascade)
+  rule      QuestRule @relation(fields: [ruleId], references: [id], onDelete: Cascade)
+
+  @@index([questId, wallet])
+}

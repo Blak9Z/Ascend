@@ -3,7 +3,7 @@ Owner: @nouslabs
 
 ## Goals
 - Track quest progress, badge issuance, and XP allocations on-chain for auditability.
-- Provide deterministic events for EasyConnect so Ascent services can consume normalized payloads via the in-house Qubic C++ library.
+- Provide deterministic events for EasyConnect so Ascend services can consume normalized payloads via the in-house Qubic C++ library.
 - Support badge minting hooks and XP multipliers without redeploying the main contract.
 
 ## Storage Layout
@@ -87,3 +87,4 @@ EasyConnect library will normalize these events into `ChainAction` payloads cont
 - [ ] Schema + ABI JSON published for EasyConnect integration tests.
 - [ ] Sample event payloads recorded and shared with Quest Evaluation Engine team.
 - [ ] Ops runbook for rotating orchestrator keys owned by @nouslabs.
+

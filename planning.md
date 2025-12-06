@@ -1,7 +1,7 @@
-# Ascent Roadmap
+# Ascend Roadmap
 
 ## Milestone 1 - Product & Technical Blueprint (Week 1-2)
-Focus: validate the quest catalog, reward model, and blockchain interaction patterns before any implementation work. Document how EasyConnect events traverse Ascent.
+Focus: validate the quest catalog, reward model, and blockchain interaction patterns before any implementation work. Document how EasyConnect events traverse Ascend.
 Deliverables:
 - Product brief covering target quest types, badge structure, XP economy, and leaderboard rules.
 - System architecture diagram that shows EasyConnect Webhook Receiver, Quest Evaluation Engine, Reward System, Leaderboard, Notifications, and Admin Panel interactions.
@@ -15,7 +15,7 @@ Deliverables:
 - `docs/milestone-1/implementation-status.md` – running log of shipped UI/infra work for milestone 1 plus next steps before milestone 2.
 ### Issue: Blueprint Validation & Architecture Alignment
 **Description**
-Capture the end-to-end journey of an EasyConnect event through Ascent, align stakeholders on the quest catalog, and lock the qubic contract requirements before we touch code so downstream teams can build confidently.
+Capture the end-to-end journey of an EasyConnect event through Ascend, align stakeholders on the quest catalog, and lock the qubic contract requirements before we touch code so downstream teams can build confidently.
 **Guides**
 - Interview growth, education, and partnerships to prioritize ten flagship quests, tagging each with complexity, dependencies, and success metrics.
 - Host a whiteboard session to map EasyConnect -> Webhook Receiver -> Quest Engine -> Rewards -> Notifications, then translate it into a C4 or sequence diagram.
@@ -23,11 +23,11 @@ Capture the end-to-end journey of an EasyConnect event through Ascent, align sta
 - Break the architecture into backlog items with INVEST-style acceptance criteria, linking each to the diagram and contract spec for traceability.
 
 ## Milestone 2 - Qubic Integration & Contract Foundations (Week 3-4)
-Focus: stand up the blockchain layer and confirm that our C++ contracts and integration library can move data between Qubic and the Ascent services.
+Focus: stand up the blockchain layer and confirm that our C++ contracts and integration library can move data between Qubic and the Ascend services.
 Deliverables:
 - Initial Qubic smart contract repository with compile scripts, unit tests, and deployment notes.
 - On-chain schemas for tracking quest progress, badge issuance, and XP allocations.
-- EasyConnect webhook adapter that normalizes Qubic transactions into Ascent events via the in-house library.
+- EasyConnect webhook adapter that normalizes Qubic transactions into Ascend events via the in-house library.
 - CI job that builds the C++ contracts and runs deterministic contract tests on every pull request.
 **Artifacts (Milestone 2)**
 - `docs/milestone-2/integration-plan.md` – objectives, workstreams, and deliverables for Qubic integration and adapters.
@@ -37,10 +37,10 @@ Deliverables:
 - `docs/milestone-2/localnet-readme.md` – guide for capturing localnet payloads and regenerating replay fixtures once access is granted.
 ### Issue: Qubic Contract Bring-Up & EasyConnect Adapter
 **Description**
-Implement the first contract slice plus the webhook adapter so we can observe qubic transactions flowing into Ascent test environments with deterministic builds.
+Implement the first contract slice plus the webhook adapter so we can observe qubic transactions flowing into Ascend test environments with deterministic builds.
 **Guides**
 - Scaffold the contract repo with clang-format, CMake, and Conan presets; document how to build and deploy to a localnet validator node.
-- Model on-chain tables for quest progress and reward claims, ensuring IDs align with wallet plus quest IDs from Ascent.
+- Model on-chain tables for quest progress and reward claims, ensuring IDs align with wallet plus quest IDs from Ascend.
 - Extend the in-house library to decode relevant qubic events, normalize timestamps, and push them into the EasyConnect webhook receiver with signature verification.
 - Add GitHub Actions jobs that compile with sanitizers, execute unit tests, and publish artifacts for integration testing on each pull request.
 

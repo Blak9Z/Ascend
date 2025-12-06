@@ -1,6 +1,6 @@
 # @nouslabs/easyconnect-adapter
 
-This package ingests raw Qubic contract events and emits normalized EasyConnect payloads that Ascent services understand. It is intentionally framework-agnostic and can run in workers, lambdas, or long-running bun/Node services.
+This package ingests raw Qubic contract events and emits normalized EasyConnect payloads that Ascend services understand. It is intentionally framework-agnostic and can run in workers, lambdas, or long-running bun/Node services.
 
 ## Usage
 
@@ -32,3 +32,4 @@ console.log(payload.chainAction);
 - Implement adapters for real Qubic log payloads via the @nouslabs SDK.
 - Add integration tests that replay recorded logs (see `bun run replay` output).
 - Publish to the internal npm registry once contracts emit live events.
+
