@@ -1,48 +1,48 @@
-export interface ChainAction {
+export type ChainAction = {
   id: string;
   wallet: string;
   questId: string;
   actionType: string;
   timestamp: number;
   payload: Record<string, unknown>;
-}
+};
 
-export interface QuestReward {
+export type QuestReward = {
   xp: number;
   badgeId?: string;
-}
+};
 
-export interface QuestRule {
+export type QuestRule = {
   id: string;
   questId: string;
   description: string;
   conditions: RuleCondition[];
   completion: CompletionConfig;
   rewards?: QuestReward;
-}
+};
 
 export type RuleConditionOperator = "equals" | "gte" | "lte" | "contains";
 
-export interface RuleCondition {
+export type RuleCondition = {
   field: string;
   operator: RuleConditionOperator;
   value: unknown;
-}
+};
 
 export type CompletionConfig = EventCountCompletion | FieldMatchCompletion;
 
-export interface EventCountCompletion {
+export type EventCountCompletion = {
   type: "eventCount";
   threshold: number;
-}
+};
 
-export interface FieldMatchCompletion {
+export type FieldMatchCompletion = {
   type: "fieldMatch";
   field: string;
   value: unknown;
-}
+};
 
-export interface QuestProgressRecord {
+export type QuestProgressRecord = {
   questId: string;
   wallet: string;
   ruleId: string;
@@ -50,9 +50,9 @@ export interface QuestProgressRecord {
   completed: boolean;
   completedAt?: number;
   lastActionId?: string;
-}
+};
 
-export interface EvaluationResult {
+export type EvaluationResult = {
   questId: string;
   wallet: string;
   ruleId: string;
@@ -60,4 +60,4 @@ export interface EvaluationResult {
   progressCount: number;
   reward?: QuestReward;
   actionId: string;
-}
+};

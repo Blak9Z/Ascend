@@ -1,7 +1,6 @@
 import { describe, expect, test } from "bun:test";
-
-import rules from "../../../docs/milestone-3/samples/rules.json";
 import actions from "../../../docs/milestone-3/samples/chain-actions.json";
+import rules from "../../../docs/milestone-3/samples/rules.json";
 import { QuestEvaluationEngine } from "../src/index.ts";
 import type { ChainAction } from "../src/types.ts";
 

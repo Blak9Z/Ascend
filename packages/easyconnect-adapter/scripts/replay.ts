@@ -2,12 +2,12 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 
-import { QubicEventAdapter, type QubicEvent } from "../src";
+import { type QubicEvent, QubicEventAdapter } from "../src";
 
-interface Args {
+type Args = {
   input: string;
   output?: string;
-}
+};
 
 const parseArgs = (): Args => {
   const args = process.argv.slice(2);

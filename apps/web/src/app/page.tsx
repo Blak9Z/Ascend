@@ -11,9 +11,11 @@ import { MilestoneTimeline } from "@/components/milestones/milestone-timeline";
 import { QuestDetail } from "@/components/quests/quest-detail";
 import { QuestList } from "@/components/quests/quest-list";
 import type { Quest } from "@/components/quests/types";
+import { RewardFeed } from "@/components/rewards/reward-feed";
 import { Button } from "@/components/ui/button";
 import { milestoneSummaries } from "@/data/milestones";
 import { chainActionFeed, questRuleCatalog } from "@/data/quest-engine-samples";
+import { rewardLedgerFeed } from "@/data/rewards";
 
 const questBlueprints: Quest[] = [
   {
@@ -271,6 +273,7 @@ export default function Home() {
             />
             <NotificationsPanel channels={notificationChannels} />
             <LeaderboardPreview entries={leaderboardEntries} />
+            <RewardFeed entries={rewardLedgerFeed} />
           </aside>
         </div>
       </div>
