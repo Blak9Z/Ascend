@@ -20,7 +20,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@ascend/quest-engine": ["../../packages/quest-engine/src"]
     },
     "strictNullChecks": true
   },
